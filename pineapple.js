@@ -1,26 +1,29 @@
 let input, button, greeting;
 
 function setup() {
-  createCanvas(600, 400);
-  
-  var feet 
+  var cnv = createCanvas(600, 400);
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+  var feet;
   var cm = feet * 30.48;
-  
+
   input = createInput();
-  input.position(200, 150);
-  
+  input.position(x+210, y+150);
+
   button = createButton('Convert');
-  button.position(340, 150);
+  button.position(x+360, y+150);
   button.mousePressed(feetToCm);
-  
-  
+
+
   greeting = createElement('h2', 'Feet to Cm Converter');
-  greeting.position(160, 55);
+  greeting.position(x+190, y+55);
 
   textAlign(CENTER);
   textSize(50);
 }
-  
+
+
 function draw() {
   background(220);
 }
@@ -32,9 +35,9 @@ function convrt() {
   input.value('');
 }
 
-  
-  //var cm2 = inchesToCm(11);
-  //print(cm2);
+
+//var cm2 = inchesToCm(11);
+//print(cm2);
 
 
 function feetToCm() {
@@ -47,6 +50,6 @@ function feetToCm() {
 
 
 //function inchesToCm() {
-  //inches = input.value();
-  //return cm2;
+//inches = input.value();
+//return cm2;
 //}
